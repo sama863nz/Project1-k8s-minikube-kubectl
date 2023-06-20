@@ -1,80 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sam's Website</title>
-    <style>
-        /* Add your CSS styles here */
-        .box {
-            width: 200px;
-            height: 200px;
-            background-color: #ffcc00;
-            border: 1px solid #333;
-        }
-    </style>
+  <title>ParkIT - Solving Parking Problems in New Zealand</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Sam's Website</h1>
-    </header>
-
+  <header>
     <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+      <div class="container">
+        <h1 class="logo">ParkIT</h1>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+      </div>
     </nav>
+  </header>
 
-    <section id="home">
-        <h2>Home</h2>
-        <p>Welcome to my website!</p>
-    </section>
+  <section id="home">
+    <div class="container">
+      <h2>Welcome to ParkIT</h2>
+      <p>Empowering New Zealand with smart parking solutions</p>
+      <a href="#contact" class="btn">Get in Touch</a>
+    </div>
+  </section>
 
-    <section id="about">
-        <h2>About</h2>
-        <p>Learn more about me and my work.</p>
-    </section>
+  <section id="about">
+    <div class="container">
+      <h2>About ParkIT</h2>
+      <p>ParkIT is a New Zealand-based startup on a mission to revolutionize parking solutions using AWS cloud, Linux, and DevOps.</p>
+    </div>
+  </section>
 
-    <section id="services">
-        <h2>Services</h2>
-        <ul>
-            <li>Web Development</li>
-            <li>Graphic Design</li>
-            <li>SEO Optimization</li>
-        </ul>
-    </section>
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service">
+        <h3>Smart Parking Systems</h3>
+        <p>Efficient parking management solutions leveraging advanced technologies.</p>
+      </div>
+      <div class="service">
+        <h3>Parking Data Analytics</h3>
+        <p>Unlocking valuable insights from parking data for better decision-making.</p>
+      </div>
+      <div class="service">
+        <h3>Mobile Parking App</h3>
+        <p>Seamless mobile app experience for convenient parking spot reservation and payment.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
+  <section id="team">
+    <div class="container">
+      <h2>Our Team</h2>
+      <div class="team-member">
+        <img src="sam.jpg" alt="Sam Agarwal">
+        <h3>Sam Agarwal</h3>
+        <p>Founder &amp; CEO</p>
+      </div>
+      <div class="team-member">
+        <img src="engineer1.jpg" alt="Software Engineer">
+        <h3>Software Engineer 1</h3>
+        <p>Backend Development</p>
+      </div>
+      <div class="team-member">
+        <img src="engineer2.jpg" alt="Software Engineer">
+        <h3>Software Engineer 2</h3>
+        <p>Frontend Development</p>
+      </div>
+      <!-- Add more team members as needed -->
+    </div>
+  </section>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
-
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
-    <div class="box"></div>
-
-    <footer>
-        <p>&copy; 2023 My Website. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Add your JavaScript code here
-
-        // Example: Change box color on click
-        const box = document.querySelector('.box');
-        box.addEventListener('click', function() {
-            box.style.backgroundColor = '#ff0000';
-        });
-    </script>
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
 </body>
 </html>
