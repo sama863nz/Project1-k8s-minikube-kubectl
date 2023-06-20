@@ -55,7 +55,7 @@ kubectl apply -f Service.yml
 
 # lets access this website from outside of minikube
 minikube service sam-website-service --url
-# which will give http://192.168.49.2:32000
+# which will give http://192.168.49.2:31000
 
 # test it on the terminal
 curl -L http://192.168.49.2:31000
