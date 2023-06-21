@@ -22,7 +22,7 @@ docker run -d -p 80:80 sama863nz/sam-website:latest
 
 
 # test the website deployed on the new EC2 Ubuntu instance on the browser by
-http://3.87.57.157
+http://54.197.201.14
 
 
 # push docker image to dockerhub
@@ -59,6 +59,7 @@ minikube service sam-website-service --url
 
 # test the deployed app (sam-website) on the minikube kubernetes cluster on the terminal
 curl -L http://192.168.49.2:31000
+minikube service --all
 
 # to run the website on the browser, the minikube IP & port needs to be exposed
 kubectl expose deployment sam-website-deployment --type=NodePort
@@ -68,5 +69,7 @@ kubectl port-forward svc/sam-website-service 80:80 --address 0.0.0.0
 
 # test the deployed app (sam-website) on the minikube kubernetes cluster on the browser
 http://192.168.49.2:31000
+http://192.168.49.2:32086
+
 
 
