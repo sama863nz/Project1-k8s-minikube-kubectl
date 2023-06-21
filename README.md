@@ -4,7 +4,7 @@
 # Two EC2 instances are required to perform CI & CD
 
 
-# SERVER-1
+# SERVER-1 (Ubuntu Linux t2-micro)
 # PRE-REQUISITES:
 # docker installation required. Execute following commands on server-1
 # For Docker Installation
@@ -21,8 +21,8 @@ docker build -t sama863nz/sam-website:latest .
 docker run -d -p 80:80 sama863nz/sam-website:latest
 
 
-# test it on the browser by
-http://54.147.126.36:80
+# test the website deployed on the new EC2 Ubuntu instance on the browser by
+http://3.87.57.157
 
 
 # push docker image to dockerhub
@@ -33,7 +33,7 @@ https://hub.docker.com/repository/docker/sama863nz/sam-website/general
 
 
 
-# SERVER-2
+# SERVER-2 (Ubuntu Linux t2-medium)
 # PRE-REQUISITES:
 # minikube & cubectl
 
@@ -57,7 +57,7 @@ kubectl apply -f Service.yml
 minikube service sam-website-service --url
 # which will give http://192.168.49.2:31000
 
-# test it on the terminal
+# test the deployed app (sam-website) on the minikube kubernetes cluster on the terminal
 curl -L http://192.168.49.2:31000
 
 # to run the website on the browser, the minikube IP & port needs to be exposed
@@ -66,7 +66,7 @@ kubectl expose deployment sam-website-deployment --type=NodePort
 # add port 80 in [Security Groups] - [inbound rules]
 kubectl port-forward svc/sam-website-service 80:80 --address 0.0.0.0
 
-# test it on the browser
+# test the deployed app (sam-website) on the minikube kubernetes cluster on the browser
 http://192.168.49.2:31000
 
 
