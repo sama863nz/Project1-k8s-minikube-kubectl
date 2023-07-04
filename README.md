@@ -69,7 +69,7 @@ kubectl port-forward svc/sam-website-service 80:80 --address 0.0.0.0
 
 # test the deployed app (sam-website) on the minikube kubernetes cluster on the browser
 http://192.168.49.2:31000
-http://192.168.49.2:32086
+
 
 
 
